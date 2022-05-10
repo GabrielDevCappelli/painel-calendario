@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
 :root {
     --blue: hsl(246, 80%, 60%);
     --light-red: hsl(15, 100%, 70%);
     --soft-blue: hsl(195, 74%, 62%);
     --pink: hsl(348, 100~% 68%);
     --line-green: hsl(145, 58%, 55%);
-    --violet: hsl(264, 64%, 52%);
+    --violet: hsl(264, 22%, 49%);
     --soft-orange: hsl(43, 84%, 65%);
     --very-dark-blue: hsl(226, 45%, 10%);
     --dark-blue: hsl(235, 46%, 20%);
@@ -27,7 +28,7 @@ button {
     background: none;
     border: none;
     color: var(--desaturated-blue);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -116,7 +117,7 @@ body {
 }
 
 .dashboard .sidebar .filters {
-    padding: var(--content-paddingt);
+    padding: var(--content-padding);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -130,10 +131,95 @@ body {
 .dashboard .sidebar .filters li:not(:first-child) {
     margin-top: 16px;
 }
-
+/* ERRO -MS-GRID-COLUMNS */
 .dashboard .cards {
-    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3]; /* DE ACORDO PROJETO ORIGINAL*/
+        grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
 }
 
+.dashboard .cards .card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 90% -5%;
+    background-size: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    height: 216px;
+    background-color: var(--pale-blue);
+    position: relative;    
+}
+
+.dashboard .cards .card__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dark-blue);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: var(--content-padding);
+    margin-top: 40px;
+}
+
+.dashboard .cards .card__content h2 {
+    position: absolute;
+    top: 20px;
+}
+
+.dashboard .cards .card__content h1 {
+    margin-top: 32px;
+}
+
+.dashboard .cards .card__content p {
+    margin-top: 16px;
+}
+
+.dashboard .cards .card__content button {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+.dashboard .cards .card--work {
+    background-color: var(--light-red);
+    background-image: url(../IMG/icon.trabalho.png);
+}
+
+.dashboard .cards .card--exercise {
+    background-color: var(--soft-blue);
+    background-image: url(../IMG/icon.exercicios.png);
+}
+
+.dashboard .cards .card--study {
+    background-color: var(--desaturated-blue);
+    background-image: url(../IMG/icon.estudos.png);
+}
+
+.dashboard .cards .card--social {
+    background-color: var(--line-green);
+    background-image: url(../IMG/icon.socializar.png);
+}
+
+.dashboard .cards .card--play {
+    background-color: var(--violet);
+    background-image: url(../IMG/icon.jogar.png);
+}
+
+.dashboard .cards .card--sleep {
+    background-color: var(--soft-orange);
+    background-image: url(../IMG/icon.dormir.png);
+}
 
 
