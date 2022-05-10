@@ -33,7 +33,7 @@ button {
 
 button:hover, button.btn-active {
     -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
     cursor: cell;
 }
 
@@ -45,4 +45,95 @@ html, h1, h2, p, ul {
 h1, p {
     font-weight: 300;
 }
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    color: var(--pale-blue);
+}
+
+body {
+    height: 95vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-algin: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.dashboard {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+    gap: var(--grid-gap);
+    max-width: 1440px;
+    margin: 16px auto;
+}
+
+.dashboard .sidebar {
+    background-color: var(--dark-blue);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 456px;
+}
+
+.dashboard .sidebar .title {
+    background-color: var(--blue);
+    padding: var(--content-padding);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.dashboard .sidebar .title__text {
+    margin-top: 32px;
+}
+
+.dashboard .sidebar .title img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px #fff solid;
+}
+
+.dashboard .sidebar .title p {
+    margin-bottom: 4px;
+}
+
+.dashboard .sidebar .filters {
+    padding: var(--content-paddingt);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style: none;    
+}
+
+.dashboard .sidebar .filters li:not(:first-child) {
+    margin-top: 16px;
+}
+
+.dashboard .cards {
+    
+}
+
+
 
