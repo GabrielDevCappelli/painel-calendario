@@ -135,7 +135,7 @@ body {
 .dashboard .cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3]; /* DE ACORDO PROJETO ORIGINAL*/
+    -ms-grid-columns: (1fr, 3); /* DE ACORDO PROJETO ORIGINAL*/
         grid-template-columns: repeat(3, 1fr);
     gap: var(--grid-gap);
 }
@@ -229,7 +229,7 @@ body {
     }
     /* ERRO -MS-GRID-COLUMNS */
     .dashboard .cards {
-        -ms-grid-columns: (1fr)[2];/* DE ACORDO PROJETO ORIGINAL*/
+        -ms-grid-columns: (1fr, 2);/* ALTERADO PARA FORMA QUE ACEITOU LEITURA FORMA ANTERIOR (1fr)[2]*/
             grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 0.5fr;
     }
